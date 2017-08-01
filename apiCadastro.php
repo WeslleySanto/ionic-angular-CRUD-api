@@ -24,12 +24,12 @@ header("Content-Type: application/html; charset=UTF-8");
     // INSERE OS DADOS
    include_once 'includes/conexao.php';
 
-
     if($con){
-        $sql = "insert into usuarios values(NULL,'".$nome."','".$email."','".md5($senha)."')";
+        $sql = "insert into tb_usuario (nm_usuario, email, senha)  values('".$nome."','".$email."','".md5($senha)."')";
+
         $query = $con->prepare($sql);
         $query ->execute();
         echo "Os dados foram inseridos com sucesso. Obrigado e bem vindo!";
     }else{
-        echo "Não foi possivel iserir os dados! Tente novamente mais tarde.";
+        echo "Não foi possivel inserir os dados! Tente novamente mais tarde.";
     };
