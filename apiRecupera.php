@@ -24,7 +24,7 @@ if ($token === "1f3d2gs3f2fg3as2fdg3re2t1we46er45" && isset($token)) {
 						'id' 	=> $result["cd_usuario"],
 						'nome' 	=> $result["nm_usuario"],
 						'email' => $result["email"],
-						'senha' 	=> $result["senha"]
+						'senha' => $result["senha"]
 		);
 	}
 
