@@ -14,7 +14,7 @@ if ($token === "1f3d2gs3f2fg3as2fdg3re2t1we46er45" && isset($token)) {
 
 	//echo("SELECT * FROM tb_usuario ORDER BY dt_cadastro DESC LIMIT {$counter}, 5");
 
-	$query = $con->prepare("SELECT * FROM tb_usuario ORDER BY dt_cadastro DESC LIMIT {$counter}, 5");
+	$query = $con->prepare("SELECT * FROM tb_usuario LIMIT {$counter}, 5");
 
 	$query->execute();
 
@@ -25,7 +25,7 @@ if ($token === "1f3d2gs3f2fg3as2fdg3re2t1we46er45" && isset($token)) {
 						'id' 	=> $result["cd_usuario"],
 						'nome' 	=> $result["nm_usuario"],
 						'email' => $result["email"],
-						'senha' => $result["senha"]
+						'data' => $result["dt_cadastro"]
 		);
 	}
 
